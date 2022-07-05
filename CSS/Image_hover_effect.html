@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .container-img{
+            position: relative;
+            width: 600px;
+        }
+        .image{
+            display: block;
+            width: 600px;
+            height: 500px;
+            transition: 1s;
+        }
+        .overlay{
+            position:absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            opacity: 0;
+            transition: 1s;
+            background-color: rgba(0,0,0,0.7);
+        }
+        .container-img .overlay:hover{
+            opacity: 1;
+        }.container-img:hover .image{
+            transform: rotate(360deg);
+        }
+        .text{
+            color: white;
+            font-size: 25px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            -moz-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            -o-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+            text-align: center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image | Hover | Effect</title>
+</head>
+<body>
+    <h2> Image Hover Effect </h2>
+    <div class="container-img">
+        <img src="campass.png" alt="silver oak college" class="image">
+        <div class="overlay">
+            <div class="text">Silver Oak University</div>
+        </div>
+    </div>
+</body>
+</html>
