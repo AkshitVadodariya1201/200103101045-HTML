@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        #D1{
+            height: 300px;
+            width: 300px;
+            background-color: blue;
+        }
+        body{
+            background-color: darkorange;
+        }
+    </style>
+
+    <script>
+        function demoAlertInternal()
+        {
+            alert("Internal Alert")
+        }
+        function demoConfirmInternal()
+        {
+            if(confirm("Are you sure...?"))
+            {
+                alert("YES...!")
+            }
+            else
+            {
+                alert("NO...!")
+            }
+        }
+        function demoPromptInternal()
+        {
+            var fName = prompt("Enter First Name....")
+            var lName = prompt("Enter Last Name....")
+            alert(fName+" "+lName)
+        }
+        function bodyBGBlack()
+        {
+            document.body.style.backgroundColor="black";
+        }
+        function divBGWhite()
+        {
+            document.getElementById("D1").style.backgroundColor="white";
+        }
+        function bodyBGprompt()
+        {
+            document.body.style.backgroundColor=prompt("Enter Color Here...");
+        }
+        function divBGprompt()
+        {
+            document.getElementById("D1").style.backgroundColor=prompt("Enter Color Here...")
+        }
+        function bodyBGCP1(){
+			document.body.style.backgroundColor=document.getElementById("CP1").value;
+		}
+        function divBGCP2(){
+			document.getElementById("D1").style.backgroundColor=document.getElementById("CP2").value;
+		}
+    </script>
+    <script src="scriptdemo.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript | Vanilla</title>
+</head>
+<body>
+    <div id="D1">
+        Hello User!
+    </div>
+    <hr>
+
+    <input type="button" value="Alert Inline" onclick="alert('Hello Guys!')">&nbsp;&nbsp;
+    <input type="button" value="Confirm Inline" onclick="confirm('Are you sure.....?')">&nbsp;&nbsp;
+    <input type="button" value="Prompt Inline" onclick="prompt('Enter name')">&nbsp;&nbsp;
+    <hr>
+
+    <input type="button" value="Alert Internal" onclick="demoAlertInternal()" >&nbsp;&nbsp;
+    <input type="button" value="Confirm Internal" onclick="demoConfirmInternal()" >&nbsp;&nbsp;
+    <input type="button" value="Prompt Internal" onclick="demoPromptInternal()" >&nbsp;&nbsp;
+    <hr>
+    
+    <input type="button" value="Alert External" onclick="demoAlertInternal()" >&nbsp;&nbsp;
+    <input type="button" value="Confirm External" onclick="demoConfirmInternal()" >&nbsp;&nbsp;
+    <input type="button" value="Prompt External" onclick="demoPromptInternal()" >&nbsp;&nbsp;
+    <hr>
+    
+    <input type="button" value="Body BG Black" onclick="bodyBGBlack()">&nbsp;&nbsp;
+    <input type="button" value="Div BG White" onclick="divBGWhite()">&nbsp;&nbsp;
+    <hr>
+    
+    <input type="button" value="Body BG Prompt" onclick="bodyBGprompt()">&nbsp;&nbsp;
+    <input type="button" value="Div BG Prompt" onclick="divBGprompt()">&nbsp;&nbsp;
+    <hr>
+
+    <input type="color" id="CP1" onclick="bodyBGCP1()">&nbsp;&nbsp;
+    <input type="color" id="CP2" onclick="divBGCP2()">&nbsp;&nbsp;
+</body>
+</html>
