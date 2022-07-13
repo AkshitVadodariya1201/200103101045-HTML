@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#D1").click(function(){
+                $("#D2").slideUp("slow")
+            })
+        })
+    </script>
+    <style>
+        #D1{
+            background-color: deepskyblue;
+            border: solid 2px;
+            height: 40px;
+            padding-top: 20px;
+            text-align: center;
+        }
+        #D2{
+            background-color: mediumvioletred;
+            border: solid 2px;
+            height: 30px;
+            padding: 50px;
+            text-align: center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide | Up</title>
+</head>
+<body>
+    <div id="D1">Click to Slide Up panel</div>
+    <div id="D2">Hello world!</div>
+</body>
+</html>

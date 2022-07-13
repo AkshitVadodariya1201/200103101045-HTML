@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#B1").click(function(){
+                $("div").animate({
+                    left : '250px'
+                });
+            });
+
+            $("#B2").click(function(){
+                $("div").animate({
+                    left: '250px',
+                    height: '150px', 
+                    width: '150px',
+                    opacity: '0.5'
+                });
+            });
+
+            $("#B3").click(function(){
+                var div=$("div");
+                div.animate({height: '300px', opacity: '0.7'}, "slow");
+                div.animate({width: '300px', opacity: '0.4'}, "slow");
+                div.animate({height: '150px', opacity: '0.7'}, "slow");
+                div.animate({width: '150px', opacity: '0.5'}, "slow");
+            })
+        });
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+</head>
+<body>
+    
+    <button id="B1">Animation1</button> &nbsp;&nbsp;
+    <button id="B2">Animation2</button> &nbsp;&nbsp;
+    <button id="B3">Animation3</button> &nbsp;&nbsp;
+
+    <div style="background-color: red; height: 100px; width: 100px; position: absolute;" ></div>
+</body>
+</html>
