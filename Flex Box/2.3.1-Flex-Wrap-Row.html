@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex | Wrap | Row</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .container{
+            display: flex;
+            border: 6px solid crimson;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* flex-wrap: nowrap; */ /* default is row nowrap */
+            /*flex-wrap: wrap;*/ /* wraps overflow items to bottom/next row */
+            height: 500px;
+        }
+        .item{
+            padding: 0.75rem;
+            text-align: center;
+            font-size: 1rem;
+            color: bisque;
+        }
+        .item-1{
+            background-color: rgb(141, 107, 197);
+        }
+        .item-2{
+            background-color: rgb(101, 45, 192);
+        }
+        .item-3{
+            background-color: rgb(45, 8, 105);
+        }
+        .item-4{
+            background-color: rgb(13, 7, 23);
+        }
+        .item-5{
+            background-color: rgb(152, 32, 88);
+        }
+        .item-6{
+            background-color: rgb(197, 107, 163);
+        }
+        .item-7{
+            background-color: rgb(11, 97, 51);
+        }
+        .item-8{
+            background-color: rgb(87, 190, 114);
+        }
+        .item-9{
+            background-color: rgb(255, 206, 12);
+        }
+        .item-10{
+            background-color: rgb(248, 105, 9);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">item-1</div>
+        <div class="item item-2">item-2</div>
+        <div class="item item-3">item-3</div>
+        <div class="item item-4">item-4</div>
+        <div class="item item-5">item-5</div>
+        <div class="item item-6">item-6</div>
+        <div class="item item-7">item-7</div>
+        <div class="item item-8">item-8</div>
+        <div class="item item-9">item-9</div>
+        <div class="item item-10">item-10</div>
+        <div class="item item-1">item-1</div>
+        <div class="item item-2">item-2</div>
+        <div class="item item-3">item-3</div>
+        <div class="item item-4">item-4</div>
+        <div class="item item-5">item-5</div>
+        <div class="item item-6">item-6</div>
+        <div class="item item-7">item-7</div>
+        <div class="item item-8">item-8</div>
+        <div class="item item-9">item-9</div>
+        <div class="item item-10">item-10</div>
+        <div class="item item-1">item-1</div>
+        <div class="item item-2">item-2</div>
+        <div class="item item-3">item-3</div>
+        <div class="item item-4">item-4</div>
+        <div class="item item-5">item-5</div>
+        <div class="item item-6">item-6</div>
+        <div class="item item-7">item-7</div>
+        <div class="item item-8">item-8</div>
+        <div class="item item-9">item-9</div>
+        <div class="item item-10">item-10</div>
+    </div>
+</body>
+</html>

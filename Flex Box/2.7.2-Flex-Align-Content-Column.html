@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex | Align | Content | Column</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, sans-serif;
+        }
+        .container{
+            display: flex;
+            height: 300px;
+            border: 4px solid black;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-content: center;
+            /* align-content: flex-end; */
+            /* align-content: flex-start; */
+            align-content: stretch;
+            /* align-content: space-around; */
+            /* align-content: space-between; */
+        }
+        .item{
+            font-size: 1rem;
+            padding: 0.75rem;
+            text-align: center;
+        }
+        .item-1{
+            background-color: rgb(92, 92, 249);
+        }
+        .item-2{
+            background-color: rgb(25, 25, 245);
+        }
+        .item-3{
+            background-color: rgb(38, 182, 248);
+        }
+        .item-4{
+            background-color: rgb(119, 215, 250);
+        }
+        .item-5{
+            background-color: rgb(125, 245, 237);
+        }
+        .item-6{
+            background-color: rgb(107, 229, 50);
+        }
+        .item-7{
+            background-color: rgb(244, 208, 47);
+        }
+        .item-8{
+            background-color: rgb(249, 105, 92);
+        }
+        .item-9{
+            background-color: rgb(228, 244, 8);
+        }
+        .item-10{
+            background-color: rgb(57, 175, 105);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-1">item-1</div>
+        <div class="item item-2">item-2</div>
+        <div class="item item-3">item-3</div>
+        <div class="item item-4">item-4</div>
+        <div class="item item-5">item-5</div>
+        <div class="item item-6">item-6</div>
+        <div class="item item-7">item-7</div>
+        <div class="item item-8">item-8</div>
+        <div class="item item-9">item-9</div>
+        <div class="item item-10">item-10</div>
+    </div>
+</body>
+</html>

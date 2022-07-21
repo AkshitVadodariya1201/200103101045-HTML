@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex | Demo | Responsive | Navbar</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Verdana, Geneva, sans-serif;
+        }
+        .navbar-container{
+            background-color: rgb(71, 219, 219);
+            border: 4px solid rgb(222, 49, 170);
+            font-size: 1rem;
+        }
+        .navbar-content{
+            display: flex;
+            justify-content: flex-end;
+        }
+        .navbar-content, navbar-item{
+            list-style: none;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar-item{
+            cursor: pointer;
+            padding: 0.5rem 1.5rem;
+            text-align: center;
+            flex: auto;
+        }
+
+        .navbar-item:hover{
+            color: aliceblue;
+            background-color: rgb(222, 49, 170);
+        }
+
+        @media all and (max-width:599px) {
+            .navbar-content{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar-container">
+        <ul class="navbar-content">
+            <li class="navbar-item item-1">Home</li>
+            <li class="navbar-item item-2">Services</li>
+            <li class="navbar-item item-3">Products</li>
+            <li class="navbar-item item-4">Contact Us</li>
+            <li class="navbar-item item-5">About Us</li>
+        </ul>
+    </nav>
+</body>
+</html>
