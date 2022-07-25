@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Range | Windet</title>
+
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet" type="text/css" />
+    <script src = "https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#AgeRangeSlider").slider({
+                orientation:"horizontal",
+                min: 18,
+                max: 100,
+                value: 18,
+                slide: function(event, ui){
+                    $("#AgeVal").val(ui, event)
+                }
+            })
+            $("#AgeVal").val($("#AgeRangeSlider").slider("value"))
+
+            $("#PriceVal").slider({
+                range: true,
+                min: 1,
+                max: 500,
+                values: [1,50],
+                start: function(event, ui){
+                    $("#StaVal").val("$" +ui.values[0])
+                },
+                stop: function(event, ui){
+                    $("#EndVal").val("$" +ui.values[1])
+                },
+                change: function(event, ui){
+                    $("#ChangeVal").val("$" +ui.values[0] + "- $" +ui.values[1])
+                },
+                slide: function(event, ui){
+                    $("#SlideVal").val("$" +ui.values[0] + "- $" +ui.values[1])
+                },
+            })
+        })
+    </script>
+
+
+    <style>
+        #AgeVal{
+            height: 30px;
+            width: 40px;
+            font-size: large;
+            font-weight: bold;
+            color: darkred;
+        }
+        #AgeRangeVal, #PriceVal{
+            width: 300px;
+        }
+        #StaVal, #EndVal, #ChangeVal, #SlideVal{
+            height: 30px;
+            width: 150px;
+            font-size: large;
+            font-weight: bold;
+            color: mediumblue;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <label for="AgeVal">Enter Your Age :</label>
+        <input type="text" id="AgeVal" disabled="true">
+    </p>
+
+    <div id="AgeRangeSlider"></div>
+
+    <hr>
+
+    <div id="PriceVal"></div>
+
+    <p>
+        <label for="StaVal">Start Value :</label>
+        <input type="text" id="StaVal" disabled="true">
+    </p>
+    <p>
+        <label for="EndVal">End Value :</label>
+        <input type="text" id="EndVal" disabled="true">
+    </p>
+    <p>
+        <label for="ChangeVal">Change In Range:</label>
+        <input type="text" id="ChangeVal" disabled="true">
+    </p>
+    <p>
+        <label for="SlideVal">Slide Gap Value :</label>
+        <input type="text" id="SlideVal" disabled="true">
+    </p>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting</title>
+
+    <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet" type="text/css">
+    <script src = "https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+
+    <style>
+        #sortable-10, #sortable-11 {
+            list-style-type: none; 
+            margin: 0; 
+            padding: 0; 
+            width: 80%; 
+        }
+
+        #sortable-10 li, #sortable-11 li {
+            margin:10px; 
+            padding:20px;
+            font-size: 17px;
+            height: 16px; 
+        }
+
+        .default {
+            background: #c6da73;
+            border: 2px solid #d25ba0;
+            color: #432222;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $("#sortable-10").sortable()
+            
+            $("#sortable-11").sortable()
+
+            $("#sortable-10").sortable({
+                connectWith: "#sortable-11, #sortable-10"
+            })
+
+            $("#sortable-11").sortable({
+                connectWith: "#sortable-11, #sortable-10"
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="wrap1">
+            <h3>List 1</h3>
+            <ul id="sortable-10">
+                <li class="default">A</li>
+                <li class="default">B</li>
+                <li class="default">C</li>
+                <li class="default">D</li>
+            </ul>
+        </div>
+
+        <div class = "wrap1">
+            <h3>List 2</h3> 
+            <ul id = "sortable-11">
+               <li class = "default">a</li>
+               <li class = "default">b</li>
+               <li class = "default">c</li>
+               <li class = "default">d</li>
+            </ul>
+         </div>
+    </div>
+    <hr />
+    <span id = result></span>
+</body>
+</html>

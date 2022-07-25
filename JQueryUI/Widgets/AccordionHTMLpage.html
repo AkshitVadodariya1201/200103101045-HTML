@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel ="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+      
+    <script>
+        $(document).ready(function(){
+            $("#MyAccordion").accordion()
+        })
+    </script>
+
+    <style>
+        #MyAccordion{
+            font-size: 15px;
+            width: 50%;
+        }
+        #MyAccordion div{
+            background: rgb(68, 134, 225);
+        }
+    </style>
+</head>
+<body>
+    <div id="MyAccordion">
+        <h3> Tab 1</h3>
+        <div>
+            <p>
+                Tab 1 Program-1
+            </p>
+        </div>
+        <h3>Tab 2</h3>
+        <div>
+            <p>
+                Tab-2 Program-2
+            </p>
+        </div>
+        <h3>Tab 3</h3>
+        <div>
+            <p>
+                Tab 3 Program-3
+            </p>
+        </div>
+        <h3>Tab 4</h3>
+        <div>
+            <p>
+                Tab-4 Program-4
+            </p>
+        </div>
+    </div>
+</body>
+</html>

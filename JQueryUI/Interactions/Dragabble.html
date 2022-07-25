@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragabble</title>
+
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js" type="text/javascript"></script>
+   
+    <style>
+        #MyDiv,#Home,#Horizontal,#Vertical,#ThreeSec{
+            width:200px; 
+            height:200px; 
+            padding:10px; 
+            background:rgb(204, 255, 0);
+            color:#000000;
+            font-size:large;
+            font-weight:bold
+        }
+        #Pixel
+         {
+            width:800px; 
+            height:200px; 
+            padding:10px; 
+            background:rgb(204, 255, 0);
+            color:#000000;
+            font-size:large;
+            font-weight:bold
+         }
+    
+         #Home,#Horizontal,#Vertical,#Pixel,#ThreeSec{
+            border:solid 3px #000000;
+         }
+
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $("#MyDiv").draggable();
+
+            $("#Home span").draggable({
+                containment: "Home"
+            })
+
+            $("#Horizontal span").draggable({
+                axis:"x"
+            })
+
+            $("#Vertical span").draggable({
+                axis: "y"
+            });
+
+            $("#ThreeSec span").draggable({
+                delay:3000
+            });
+
+            $("#Pixel span").draggable({
+                distance: 200
+            });
+        })
+    </script>
+</head>
+<body>
+    <div id="MyDiv">
+        <p>Hello Student...</p>
+    </div>
+    <hr>
+    <div id="Home">
+        <span>This Is My Home And I Can Move Within It Only.....</span><br><br>
+    </div>
+    <hr>
+    <div id="Horizontal">
+        <span>I Can Move Only Horizontaly....</span><br /><br />
+    </div>
+    <hr>
+    <div id="Vertical">
+        <span>I Can Move Only Verticaly....</span><br /><br />
+    </div>
+    <hr>
+    <div id="ThreeSec">
+        <span>I Can Move Only After 3 Seconds....</span><br /><br />
+    </div>
+    <hr>
+    <div id="Pixel">
+        <span>I Can Move Only After 200 PX....</span><br /><br />
+    </div>
+</body>
+</html>
